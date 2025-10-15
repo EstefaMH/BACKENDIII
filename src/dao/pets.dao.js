@@ -8,4 +8,15 @@ export const GetAllPetsDAO = async () => {
     console.error('Error en el DAO al obtener todas las mascotas:', error);
     return {status : 500 , error : 'Fallo al recuperar las mascotas de la base de datos.'};
   }
+
 };
+
+export const CreatePetDAO = async (pet) => {
+  try {
+    const savedPet = await PetsModel.create(pet);
+    return { status: 201, response: savedPet };
+  } catch (error) {
+    console.error('Error en el DAO al crear la mascota:', error);
+    return { status: 500, error: 'Fallo al crear la mascota en la base de datos.' };
+  } 
+}

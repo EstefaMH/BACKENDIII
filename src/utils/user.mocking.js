@@ -1,10 +1,9 @@
 import { faker } from '@faker-js/faker';
-import bcrypt from 'bcryptjs';
+import { createHash } from './bycrypt.js';
 
 const generateMockUser = () => {
-    const salt = bcrypt.genSaltSync(10);
-    const hashedPassword = bcrypt.hashSync('coder123', salt);
 
+    const hashedPassword = createHash('coder123');
     return {
         name: faker.person.fullName(),
         email: faker.internet.email(),

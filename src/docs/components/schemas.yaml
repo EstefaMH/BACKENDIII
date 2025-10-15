@@ -1,0 +1,49 @@
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        name:
+          type: string
+          example: Estefania
+        email:
+          type: string
+          example: estefania@gmail.com
+        password:
+          type: string
+          example: Coder123
+        role:
+          type: string
+          example: user
+
+    Pet:
+      type: object
+      properties:
+        name:
+          type: string
+          example: Luna
+        specie:
+          type: string
+          example: cat
+        age:
+          type: integer
+          example: 2
+        adopted:
+          type: boolean
+          example: false
+    
+    Adoption:
+      type: object
+      properties:
+        id:
+          type: string
+          example: 652f1a2b3c4d5e6f7g8h9i0
+        userId:
+          type: string
+          description: ID del usuario que adopta
+          example: 652f1a2b3c4d5e6f7g8h9i0
+        petId:
+          type: string
+          description: ID de la mascota adoptada
+          example: 752f1a2b3c4d5e6f7g8h9i0
+        

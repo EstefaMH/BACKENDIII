@@ -1,0 +1,8 @@
+components:
+  responses:
+    NotFound:
+      description: Recurso no encontrado
+    BadRequest:
+      description: Error en la solicitud
+    InternalError:
+      description: Error interno del servidor
